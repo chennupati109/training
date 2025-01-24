@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Functions
+        //A function is reusable block of code
+        //It can be call any where in program
+        //You can use the same code with different arguments to get the results
+
+        function greet(){
+            console.log("Hello")
+        }
+        greet()
+   console.log("Hi")
+   greet()
+
+   //function with parameters
+   function g(name){
+    console.log("hello " + name)
+   }
+
+   let name = prompt("Enter your name?")
+   g(name)
+
+   // Add two numbers
+
+   function add(x1, x2){
+    console.log(x1+x2)
+   }
+   add(2,3)
+
+   //function return:
+   //The return statement can be used to return the value to function call
+   
+   function a(aa,bb){
+    return aa+bb
+   }
+   let n1 = parseFloat(prompt("Enter a number1"))
+   let n2 = parseFloat(prompt("Enter number2"))
+   // calling function
+   let result = a(n1, n2)
+   console.log("The sum is: " + result)
+
+   //Anonymous Functions
+   //A function without any name, After we create a function without name and we assign it to a variable
+   //Example:
+    sum = function(c, d){
+        let r = c+d
+        return r
+    } 
+    console.log(sum(8,9))
+
+    </script>
+</body>
+</html>
