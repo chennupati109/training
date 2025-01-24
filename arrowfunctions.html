@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+    //Arrow Functions:
+   // -------------------
+     //ES6 version
+     //more readable and more structure
+     //annonymous functions(lamda functions)
+     //without function name but they are assigned to a variable
+
+//Arrow Functions Without parameters
+     let c=()=>{
+        console.log("hello")
+     }
+     c()
+
+// With parameters
+//Example
+
+let x=(a,b)=>{
+ console.log(a+b)
+}
+x(2,4)
+
+//With one argument
+//without using parenthesis()
+//Example
+let greet=x=>console.log(x)
+greet("hi")
+
+//Arrow function without arguments
+//Example
+let wish=()=>console.log('hello')
+wish()
+
+//Arrow Function as an expression
+let age = 18
+let welcome = (age<18)?
+()=>console.log("hi"):
+()=>console.log("welcome")
+welcome()
+
+//Synchronous and Asynchronous:
+//Synchronous:
+function Task1(){
+    console.log("Task 1 started")
+}
+function Task2(){
+    console.log("Task 2 started")
+}
+function Task3(){
+    console.log("Task 3 started")
+}
+
+Task1()
+Task2()
+Task3()
+
+//Asynchronous functions:
+//Multiple tasks at a time
+console.log("Hii")
+setTimeout(()=>{
+    console.log("Hi I am Waiting")
+},5000);
+console.log("I am in Lab ")
+
+// JavaScript Callbacks:
+//A call back function is a function that is passed argument to another function\
+
+function greets(name,callback){
+    console.log(`Hello, ${name}!`)
+    callback();
+//This calls the callback function after greeting
+}
+
+function goodBye(){
+console.log("GoodBye")
+}
+greets("sam", goodBye)
+// call greet and pass say GoodBye as the callback
+
+//Promise:
+//Three states
+//1. Pending: still not completed -- continuing
+//2. fulfilled: tadk completed
+//3.Rejected: the operation is failed
+//Example
+ let myPromise = new Promise((resolve, reject)=>{
+    let success = true;
+    if(success){
+        resolve("task completed");
+    }else{
+     reject("task failed")
+    }
+ }
+ )
+</Script>
+</body>
+</html>
