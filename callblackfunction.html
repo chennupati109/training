@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mainfunction(callback){
+            document.write("executing main function")
+            callback()
+            // here we call the function
+        }
+        function callbackfunction(){
+            document.write("call back function executed")
+
+        }
+        mainfunction(callbackfunction)
+        // second function is called by first as an argument and acces it
+        //second function is called by using callback
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        welcome = function(name,callback){
+            document.write("hi "+name)
+            callback()
+        }
+        function hello(){
+            document.write("hello")
+            
+        }
+        welcome("ram",hello)
+
+    </script>
+</body>
+</html>
