@@ -122,21 +122,43 @@
 
 // export default App;
 
-import React,{useState} from "react";
+// import React,{useState} from "react";
 
-function App(){
-  const[text,setText] = useState("")
+// function App(){
+//   const[text,setText] = useState("")
   
-  const handleChange = (event) => {
-    setText(event.target.value)
-  }
+//   const handleChange = (event) => {
+//     setText(event.target.value)
+//   }
 
-  return(
-    <div>
-      <input type="text" value={text} onChange={handleChange}/>
-      <p>Your Text:{text}</p>
-    </div>
+//   return(
+//     <div>
+//       <input type="text" value={text} onChange={handleChange}/>
+//       <p>Your Text:{text}</p>
+//     </div>
     
-  )
+//   )
+// }
+// export default App;  
+
+
+// 
+
+import React, { useState } from 'react';
+
+function App() {
+  const [key, setKey] = useState("");
+  const handleKeyDown = (event) => {
+    setKey(event.key);
+  };
+
+  return (
+    <div className="app">
+      <h1>welcome {key}</h1>
+      {key && <h2>pressed key: {key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="press here" />
+    </div>
+  );
 }
-export default App;
+
+export default App;
